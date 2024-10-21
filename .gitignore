@@ -1,0 +1,6 @@
+/db_data_live/
+.DS_Store
+.env
+/wp-content/*
+!/wp-content/themes/
+/wp-content/themes/twenty*
