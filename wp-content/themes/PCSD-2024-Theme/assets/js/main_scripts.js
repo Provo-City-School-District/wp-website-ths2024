@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.error("Element with ID 'heroVideo' not found.");
   }
 });
-alert("hello");
+
 /*
 =============================================================================================================
 Collapsible Content
