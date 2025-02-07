@@ -1,5 +1,5 @@
 <?php
-
+$theme_version = '1.0.1';
 function my_theme_variables()
 {
     $my_theme_variables = array(
@@ -29,6 +29,7 @@ function my_theme_variables()
 // }
 function pcsd_child_theme_enqueue_styles()
 {
-    wp_enqueue_style('variables', get_stylesheet_directory_uri() . '/assets/css/variables.css', '', '1.0.0', false);
+    global $theme_version;
+    wp_enqueue_style('variables', get_stylesheet_directory_uri() . '/assets/css/variables.css', '', $theme_version, false);
 }
 add_action('wp_enqueue_scripts', 'pcsd_child_theme_enqueue_styles', 9999);
