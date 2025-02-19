@@ -63,35 +63,7 @@ $theme_vars = my_theme_variables();
 			<?php
 			} elseif ($get_to_know_fields['video_or_slider'] == 'slider') {
 			?>
-				<div class="slick-wrapper">
-					<?php
-					$args = array('post_type' => 'announcement', 'posts_per_page' => 5, 'orderby'  => array('date' => 'DESC'));
-					// Variable to call WP_Query.
-					$the_query = new WP_Query($args);
-					if ($the_query->have_posts()) :
-						while ($the_query->have_posts()) : $the_query->the_post(); ?>
-							<article class="slide" style="background-image: url('<?php the_field('announcement_image'); ?>')">
-								<div class="slide-text">
-									<h3><?php the_title(); ?></h3>
-									<p>
-										<?php
-										the_field('announcement_text');
-										$slideLink = get_field('announcement_link');
-										$slideLinkLabel = get_field('announcement_link_label');
-										if ($slideLink) { ?>
-											<a href="<?php echo $slideLink ?>"><?php echo $slideLinkLabel ?></a>
-										<?php }
-										?>
-									</p>
-								</div>
-							</article>
-					<?php endwhile;
-					else :
-						echo '<p>No Content Found</p>';
-					endif;
-					wp_reset_query();
-					?>
-				</div>
+
 			<?php
 			}
 
