@@ -10,7 +10,7 @@ function my_theme_variables()
         'google_tag_manager_id' => 'G-FTPJPV04N2',
         // 'top_sidebar_cal' => '[calendar id="2064"]',
         // 'bot_sidebar_cal' => '[calendar id="2066"]',
-        'front_page_cal' => '[calendar id="2069"]',
+        'front_page_cal' => '[calendar id="2751"]',
         // 'insta_link' => 'http://#',
         // 'facebook_link' => 'http://#',
         // 'twitter_link' => 'http://#',
