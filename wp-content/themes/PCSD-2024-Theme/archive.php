@@ -10,7 +10,8 @@ get_header();
 				<?php
 				// Exclude sticky posts from the main query
 				$args = array(
-					'post__not_in' => get_option('sticky_posts')
+					'post__not_in' => get_option('sticky_posts'),
+					'paged' => $paged
 				);
 				$query = new WP_Query($args);
 
@@ -46,7 +47,11 @@ get_header();
 			</div>
 		</div>
 		<nav class="archiveNav">
-			<?php echo paginate_links(); ?>
+			<?php
+					echo paginate_links(array(
+						'total' => $query->max_num_pages
+					));
+			?>
 		</nav>
 	<?php else :
 					echo '<p>No Content Found</p>';
