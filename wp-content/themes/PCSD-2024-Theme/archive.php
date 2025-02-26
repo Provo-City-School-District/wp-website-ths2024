@@ -58,7 +58,9 @@ get_header();
 				endif;
 	?>
 	</div>
-	<?php get_sidebar(); ?>
+	<aside id="rightSidebar" class="rightSidebar">
+		<?php default_sidebar(); ?>
+	</aside>
 </main>
 <?php
 get_footer();
